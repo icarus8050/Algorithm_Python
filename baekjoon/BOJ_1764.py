@@ -16,6 +16,4 @@ for i in range(m):
     people_2.add(p)
 
 ans = sorted(people_1 & people_2)
-print(len(ans))
-for v in ans:
-    print(v)
+print(len(ans), *ans, sep='\n')
