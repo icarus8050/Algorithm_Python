@@ -4,18 +4,18 @@ import sys
 
 n, m = map(int, sys.stdin.readline().split())
 ans = list()
-people = set()
+people_1 = set()
+people_2 = set()
 
 for i in range(n):
     p = sys.stdin.readline().strip()
-    people.add(p)
+    people_1.add(p)
 
 for i in range(m):
     p = sys.stdin.readline().strip()
-    if p in people:
-        ans.append(p)
+    people_2.add(p)
 
-ans = sorted(ans)
+ans = sorted(people_1 & people_2)
 print(len(ans))
 for v in ans:
     print(v)
